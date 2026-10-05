@@ -1,0 +1,11 @@
+{
+  "name": "telemedicine-kiosk-root",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm install --prefix client && npm install --prefix server",
+    "dev:client": "npm run --prefix client dev",
+    "dev:server": "npm run --prefix server dev",
+    "build:client": "npm run --prefix client build"
+  }
+}

@@ -1,0 +1,157 @@
+.patient-login-container {
+  min-height: 100vh;
+  background-color: var(--color-bg, #f6faf7);
+  display: flex;
+  flex-direction: column;
+}
+
+.patient-login-content {
+  max-width: 900px;
+  margin: 36px auto 60px auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.patient-login-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  border: 2px solid #d5e7dc;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.kiosk-quick-guest-box {
+  background: linear-gradient(135deg, #1f5c45 0%, #164634 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(31, 92, 69, 0.25);
+  margin-bottom: 32px;
+  transition: transform 0.15s ease;
+  min-height: 100px;
+}
+
+.kiosk-quick-guest-box:hover {
+  transform: translateY(-2px);
+}
+
+.kiosk-quick-guest-box:active {
+  transform: scale(0.99);
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 28px 0;
+  color: #557262;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.login-divider::before, .login-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 2px solid #dbeae0;
+}
+
+.login-divider span {
+  padding: 0 16px;
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.kiosk-input-group {
+  margin-bottom: 20px;
+}
+
+.kiosk-input-group label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a3325;
+  margin-bottom: 8px;
+}
+
+.kiosk-text-input {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid #c9dec2;
+  border-radius: 14px;
+  font-size: 1.15rem;
+  background: #f8faf8;
+  color: #14281c;
+  box-sizing: border-box;
+}
+
+.kiosk-text-input:focus {
+  border-color: #1f5c45;
+  background: #ffffff;
+  outline: none;
+}
+
+.gender-pills-row {
+  display: flex;
+  gap: 12px;
+}
+
+.gender-touch-btn {
+  flex: 1;
+  padding: 14px;
+  border-radius: 14px;
+  border: 2px solid #cfe1d5;
+  background: #f5f9f6;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #274332;
+  cursor: pointer;
+  min-height: 58px;
+}
+
+.gender-touch-btn.active {
+  background: #1f5c45;
+  color: white;
+  border-color: #1f5c45;
+}
+
+.patient-submit-btn {
+  width: 100%;
+  background: #1f5c45;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 20px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 74px;
+  margin-top: 14px;
+  box-shadow: 0 8px 24px rgba(31, 92, 69, 0.28);
+  transition: transform 0.15s ease;
+}
+
+.patient-submit-btn:hover {
+  background: #164634;
+}
+
+.patient-submit-btn:active {
+  transform: scale(0.99);
+}

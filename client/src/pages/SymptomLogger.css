@@ -1,0 +1,286 @@
+.symptom-logger-container {
+  min-height: 100vh;
+  background-color: var(--color-bg, #f6faf7);
+  display: flex;
+  flex-direction: column;
+}
+
+.logger-content {
+  max-width: 1100px;
+  margin: 24px auto 60px auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.step-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px 32px;
+  border: 2px solid #e2eee6;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.step-header h2 {
+  margin: 0;
+  font-size: 1.55rem;
+  color: var(--color-green, #1f5c45);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.step-header p {
+  margin: 4px 0 0 0;
+  font-size: 1.05rem;
+  color: #556c5e;
+}
+
+/* Voice Input Box */
+.voice-input-card {
+  background: linear-gradient(180deg, #f0f8f4 0%, #e8f4ed 100%);
+  border: 2px dashed #a5cfb7;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.mic-giant-btn {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--color-green, #1f5c45);
+  color: white;
+  border: 4px solid #ffffff;
+  box-shadow: 0 6px 20px rgba(31, 92, 69, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease;
+  margin-bottom: 12px;
+}
+
+.mic-giant-btn:active {
+  transform: scale(0.94);
+}
+
+.mic-giant-btn.listening {
+  background: var(--color-red, #b3261e);
+  animation: pulse-mic 1.4s infinite;
+}
+
+@keyframes pulse-mic {
+  0% { box-shadow: 0 0 0 0 rgba(179, 38, 30, 0.5); }
+  70% { box-shadow: 0 0 0 20px rgba(179, 38, 30, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(179, 38, 30, 0); }
+}
+
+.transcript-display {
+  width: 100%;
+  min-height: 52px;
+  background: #ffffff;
+  border: 1px solid #c7dcd0;
+  border-radius: 14px;
+  padding: 12px 18px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #172a20;
+  margin-top: 12px;
+  box-sizing: border-box;
+}
+
+/* Big Symptom Icon Grid */
+.symptom-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.symptom-tap-card {
+  background: #f8fbf9;
+  border: 2px solid #d5e7dc;
+  border-radius: 18px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  min-height: 80px;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.symptom-tap-card:hover {
+  border-color: var(--color-green, #1f5c45);
+  background: #ffffff;
+}
+
+.symptom-tap-card.selected {
+  background: #e9f7ef;
+  border-color: var(--color-green, #1f5c45);
+  box-shadow: 0 4px 14px rgba(31, 92, 69, 0.18);
+  outline: 2px solid var(--color-green, #1f5c45);
+}
+
+.symptom-tap-card.emergency-hint {
+  border-left: 6px solid var(--color-red, #b3261e);
+}
+
+.symptom-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #ffffff;
+  color: var(--color-green, #1f5c45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #d3e5da;
+}
+
+.symptom-tap-card.selected .symptom-icon-wrap {
+  background: var(--color-green, #1f5c45);
+  color: #ffffff;
+}
+
+.symptom-label-group strong {
+  display: block;
+  font-size: 1.15rem;
+  color: #15271d;
+}
+
+.symptom-label-group small {
+  display: block;
+  font-size: 0.95rem;
+  color: #556e5f;
+  margin-top: 2px;
+}
+
+/* Body Area Selector */
+.body-parts-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.body-pill-btn {
+  background: #f2f7f4;
+  border: 2px solid #cfe2d6;
+  border-radius: 30px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2b4536;
+  cursor: pointer;
+  min-height: 52px;
+  transition: all 0.15s ease;
+}
+
+.body-pill-btn.active {
+  background: var(--color-green, #1f5c45);
+  color: white;
+  border-color: var(--color-green, #1f5c45);
+}
+
+/* Demographic & Vitals Row */
+.demographics-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.segmented-group {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.segmented-btn {
+  flex: 1;
+  background: #f0f6f2;
+  border: 2px solid #cfe0d5;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #385142;
+  cursor: pointer;
+  min-height: 54px;
+}
+
+.segmented-btn.active {
+  background: var(--color-green, #1f5c45);
+  color: white;
+  border-color: var(--color-green, #1f5c45);
+}
+
+/* Vitals Presets */
+.vitals-preset-bar {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.vitals-chip {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #bcd6c7;
+  background: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.vitals-chip.danger {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #991b1b;
+}
+
+/* Bottom CTA Floating Action */
+.logger-footer-cta {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+}
+
+.submit-triage-btn {
+  background: var(--color-green, #1f5c45);
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 18px 48px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 80px;
+  box-shadow: 0 10px 24px rgba(31, 92, 69, 0.28);
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.submit-triage-btn:hover {
+  background: var(--color-green-hover, #164332);
+}
+
+.submit-triage-btn:active {
+  transform: scale(0.98);
+}

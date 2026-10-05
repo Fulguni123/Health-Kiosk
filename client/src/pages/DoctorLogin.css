@@ -1,0 +1,108 @@
+.doctor-login-container {
+  min-height: 100vh;
+  background-color: #0d1b14;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.doctor-login-content {
+  max-width: 520px;
+  margin: 60px auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.doctor-login-card {
+  background: #15261e;
+  border: 1px solid #233e30;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.doctor-avatar-badge {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: #1f5c45;
+  color: #5eead4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+  border: 2px solid #2e5944;
+}
+
+.doctor-input-group {
+  margin-bottom: 20px;
+}
+
+.doctor-input-group label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #94b8a4;
+  margin-bottom: 8px;
+}
+
+.doctor-text-input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #2a4c3a;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  background: #0f1d16;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.doctor-text-input:focus {
+  border-color: #2dd4bf;
+  outline: none;
+}
+
+.doctor-login-submit-btn {
+  width: 100%;
+  background: #1f5c45;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 16px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 56px;
+  margin-top: 10px;
+  transition: all 0.15s ease;
+}
+
+.doctor-login-submit-btn:hover {
+  background: #164634;
+}
+
+.quick-doctor-demo-btn {
+  width: 100%;
+  background: #1e382b;
+  color: #5eead4;
+  border: 1px solid #2e5c46;
+  border-radius: 30px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  transition: all 0.15s ease;
+}
+
+.quick-doctor-demo-btn:hover {
+  background: #254737;
+}

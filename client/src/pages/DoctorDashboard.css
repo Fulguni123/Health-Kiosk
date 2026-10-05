@@ -1,0 +1,172 @@
+.doctor-container {
+  min-height: 100vh;
+  background-color: #f4f8f5;
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-content {
+  max-width: 1200px;
+  margin: 28px auto 60px auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* Flashing Emergency Strip */
+.flashing-emergency-banner {
+  background: #b3261e;
+  color: white;
+  padding: 18px 24px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: flash-red 1.2s infinite alternate;
+  box-shadow: 0 8px 24px rgba(179, 38, 30, 0.4);
+}
+
+@keyframes flash-red {
+  0% { background: #b3261e; transform: scale(1); }
+  100% { background: #e0281e; transform: scale(1.008); }
+}
+
+/* Split Queue + Prescription Form */
+.doctor-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 24px;
+}
+
+@media (max-width: 1000px) {
+  .doctor-layout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.queue-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.patient-queue-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 26px;
+  border: 1px solid #d5e5db;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  transition: all 0.15s ease;
+}
+
+.patient-queue-card.RED {
+  border-left: 8px solid #b3261e;
+  background: #fffcfc;
+}
+
+.patient-queue-card.YELLOW {
+  border-left: 8px solid #e8a317;
+  background: #fffdfa;
+}
+
+.patient-queue-card.GREEN {
+  border-left: 8px solid #1f5c45;
+}
+
+.patient-queue-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.badge-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.badge-tag.RED { background: #b3261e; color: white; }
+.badge-tag.YELLOW { background: #e8a317; color: white; }
+.badge-tag.GREEN { background: #1f5c45; color: white; }
+
+/* Prescription Box */
+.prescription-creator-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 2px solid #d0e4d7;
+  padding: 24px 28px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+.form-field {
+  margin-bottom: 16px;
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #274233;
+  margin-bottom: 6px;
+}
+
+.form-field input, .form-field select, .form-field textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #c7dcd0;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.dose-timing-pills {
+  display: flex;
+  gap: 8px;
+}
+
+.timing-pill {
+  flex: 1;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #c4dacf;
+  background: #f8faf8;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.timing-pill.selected {
+  background: #1f5c45;
+  color: white;
+  border-color: #1f5c45;
+}
+
+.submit-rx-btn {
+  width: 100%;
+  background: #1f5c45;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 14px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 56px;
+  margin-top: 14px;
+}
+
+.submit-rx-btn:hover {
+  background: #164735;
+}

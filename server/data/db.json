@@ -1,0 +1,156 @@
+{
+  "doctors": [
+    {
+      "id": "DOC-101",
+      "name": "Dr. A. Sharma, MD",
+      "email": "dr.sharma@health.gov.in",
+      "password": "doc123",
+      "specialization": "Cardiology & Rural Tele-ICU",
+      "regNumber": "MCI-88421",
+      "activeKiosk": "Majuli Health Hub"
+    }
+  ],
+  "patients": [
+    {
+      "id": "PT-6537",
+      "name": "patient1",
+      "phone": "",
+      "abhaId": "ABHA-8374-9273",
+      "age": 22,
+      "gender": "male",
+      "village": "Majuli Village",
+      "symptoms": [],
+      "bodyParts": [],
+      "vitals": {
+        "temperature": "98.6",
+        "spo2": "98",
+        "systolicBP": "120",
+        "diastolicBP": "80",
+        "feverDays": "1"
+      },
+      "speechText": "",
+      "status": "consulting",
+      "createdAt": "2026-09-30T09:59:24.752Z",
+      "text": "",
+      "triage": {
+        "level": "GREEN",
+        "score": 2,
+        "reasons": [
+          "Symptoms appear mild with stable physiological vitals."
+        ],
+        "advice": "Your symptoms appear mild and stable. A remote doctor is available for routine consultation and home care advice.",
+        "recommendedAction": "Routine Teleconsultation & Medication",
+        "timestamp": "2026-09-30T09:59:24.752Z"
+      }
+    },
+    {
+      "id": "PT-9941",
+      "name": "Biren Kalita",
+      "phone": "9864012345",
+      "abhaId": "ABHA-9921-3312-4411",
+      "age": 58,
+      "gender": "male",
+      "village": "Majuli Village Kiosk",
+      "symptoms": [
+        "Chest Pain",
+        "Breathlessness"
+      ],
+      "bodyParts": [
+        "chest"
+      ],
+      "vitals": {
+        "temperature": "99.2",
+        "spo2": "89",
+        "systolicBP": "168",
+        "diastolicBP": "104",
+        "feverDays": "1"
+      },
+      "speechText": "Severe chest tightness radiating to left arm",
+      "triage": {
+        "level": "RED",
+        "score": 9,
+        "reasons": [
+          "Combined chest pain and respiratory distress with hypoxemia (SpO2 89%)."
+        ],
+        "advice": "Emergency cardiology intervention required.",
+        "recommendedAction": "Immediate Emergency Video Call & Hospital Transfer"
+      },
+      "status": "waiting",
+      "createdAt": "2026-09-30T09:34:12.992Z"
+    },
+    {
+      "id": "PT-8820",
+      "name": "Pooja Deka",
+      "phone": "9435012345",
+      "abhaId": "ABHA-7712-4499-1122",
+      "age": 28,
+      "gender": "female",
+      "village": "Sonapur Subcenter",
+      "symptoms": [
+        "High Fever",
+        "Vomiting"
+      ],
+      "bodyParts": [
+        "head",
+        "stomach"
+      ],
+      "vitals": {
+        "temperature": "103.4",
+        "spo2": "97",
+        "systolicBP": "118",
+        "diastolicBP": "78",
+        "feverDays": "4"
+      },
+      "speechText": "Fever for 4 days and persistent vomiting",
+      "triage": {
+        "level": "YELLOW",
+        "score": 5,
+        "reasons": [
+          "Prolonged pyrexia (>3 days) warrants dengue/malaria investigation."
+        ],
+        "advice": "Priority teleconsultation needed today.",
+        "recommendedAction": "Priority Doctor Teleconsultation within 15 minutes"
+      },
+      "status": "waiting",
+      "createdAt": "2026-09-30T09:27:12.992Z"
+    }
+  ],
+  "prescriptions": [],
+  "villages": [
+    {
+      "id": "v1",
+      "name": "Majuli Village Kiosk",
+      "cases": 28,
+      "feverCount": 9,
+      "alert": false
+    },
+    {
+      "id": "v2",
+      "name": "Dhekiajuli Camp Kiosk",
+      "cases": 34,
+      "feverCount": 18,
+      "alert": true
+    },
+    {
+      "id": "v3",
+      "name": "Sonapur Health Center",
+      "cases": 19,
+      "feverCount": 4,
+      "alert": false
+    },
+    {
+      "id": "v4",
+      "name": "Rani Island Outpost",
+      "cases": 22,
+      "feverCount": 7,
+      "alert": false
+    },
+    {
+      "id": "v5",
+      "name": "Boko Rural Subcenter",
+      "cases": 15,
+      "feverCount": 3,
+      "alert": false
+    }
+  ]
+}

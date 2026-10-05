@@ -1,0 +1,107 @@
+.admin-container {
+  min-height: 100vh;
+  background-color: #f4f8f5;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-content {
+  max-width: 1200px;
+  margin: 28px auto 60px auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.admin-alert-banner {
+  background: #fff1f2;
+  border: 2px solid #fecdd3;
+  color: #9f1239;
+  padding: 18px 24px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 14px rgba(159, 18, 57, 0.08);
+}
+
+.admin-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.metric-stat-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px 28px;
+  border: 1px solid #ddecde;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.metric-stat-card h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #557262;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.metric-stat-card .stat-number {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin: 8px 0 4px 0;
+  color: #1f5c45;
+}
+
+.metric-stat-card .stat-sub {
+  font-size: 0.9rem;
+  color: #728c7d;
+}
+
+/* Charts Grid */
+.charts-dual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 900px) {
+  .charts-dual-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chart-card-box {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #d8ebd0;
+  padding: 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.chart-card-box h3 {
+  margin: 0 0 16px 0;
+  font-size: 1.25rem;
+  color: #1a3325;
+}
+
+/* Outbreak Table */
+.outbreak-table-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #d8ebd0;
+  padding: 26px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.future-scope-card {
+  background: linear-gradient(135deg, #1f5c45 0%, #153b2d 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 32px;
+  margin-top: 32px;
+  box-shadow: 0 8px 24px rgba(31, 92, 69, 0.25);
+}

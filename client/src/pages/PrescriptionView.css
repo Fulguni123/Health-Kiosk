@@ -1,0 +1,116 @@
+.rx-container {
+  min-height: 100vh;
+  background-color: var(--color-bg, #f6faf7);
+  display: flex;
+  flex-direction: column;
+}
+
+.rx-content {
+  max-width: 960px;
+  margin: 32px auto 60px auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.rx-paper-card {
+  background: #ffffff;
+  border-radius: 24px;
+  border: 2px solid #d4e8dc;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.rx-clinic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e5f1ea;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.rx-medicine-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.medicine-item-card {
+  background: #f8fbf9;
+  border: 2px solid #cfe2d6;
+  border-radius: 18px;
+  padding: 22px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.med-name-group h3 {
+  margin: 0;
+  font-size: 1.45rem;
+  color: var(--color-green, #1f5c45);
+}
+
+.med-name-group p {
+  margin: 4px 0 0 0;
+  font-size: 1rem;
+  color: #557061;
+}
+
+.dosage-icons-row {
+  display: flex;
+  gap: 12px;
+}
+
+.dose-icon-bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid #d0e4d7;
+  background: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2b4536;
+}
+
+.dose-icon-bubble.active {
+  background: #eef8f3;
+  border-color: #1f5c45;
+  color: #1f5c45;
+}
+
+.dose-icon-bubble.inactive {
+  opacity: 0.35;
+  filter: grayscale(1);
+}
+
+.pharmacy-dispatch-banner {
+  background: #ecfdf5;
+  border: 2px solid #a7f3d0;
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 28px 0;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.qr-code-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-top: 2px dashed #d5e8dc;
+  padding-top: 28px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}

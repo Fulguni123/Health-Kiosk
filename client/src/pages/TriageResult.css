@@ -1,0 +1,185 @@
+.triage-container {
+  min-height: 100vh;
+  background-color: var(--color-bg, #f6faf7);
+  display: flex;
+  flex-direction: column;
+}
+
+.triage-content {
+  max-width: 950px;
+  margin: 32px auto 60px auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.triage-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px 44px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 4px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.triage-card.RED {
+  border-color: var(--color-red, #b3261e);
+}
+
+.triage-card.YELLOW {
+  border-color: var(--color-turmeric, #e8a317);
+}
+
+.triage-card.GREEN {
+  border-color: var(--color-green, #1f5c45);
+}
+
+/* Badge header */
+.triage-level-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  border-radius: 40px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.triage-card.RED .triage-level-pill {
+  background: #fef2f2;
+  color: var(--color-red, #b3261e);
+  border: 2px solid #fecaca;
+}
+
+.triage-card.YELLOW .triage-level-pill {
+  background: #fef9ee;
+  color: #925c04;
+  border: 2px solid #fde6b6;
+}
+
+.triage-card.GREEN .triage-level-pill {
+  background: #eaf6ef;
+  color: var(--color-green, #1f5c45);
+  border: 2px solid #bfe2ce;
+}
+
+.triage-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  line-height: 1.25;
+}
+
+.triage-card.RED .triage-title { color: var(--color-red, #b3261e); }
+.triage-card.YELLOW .triage-title { color: #8a5704; }
+.triage-card.GREEN .triage-title { color: var(--color-green, #1f5c45); }
+
+/* Audio Readout Banner */
+.triage-voice-prompt {
+  background: #f0f7f3;
+  border: 2px dashed #b9dbc8;
+  border-radius: 16px;
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  margin: 24px 0;
+}
+
+.triage-voice-prompt:hover {
+  background: #e6f3ec;
+}
+
+/* Reasons Box */
+.reasons-box {
+  background: #f9fbf9;
+  border: 1px solid #ddecde;
+  border-radius: 18px;
+  padding: 24px 28px;
+  margin: 28px 0;
+}
+
+.reasons-box h3 {
+  margin: 0 0 14px 0;
+  font-size: 1.35rem;
+  color: #1a3325;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reasons-list {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.reasons-list li {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #243d2f;
+  margin-bottom: 8px;
+}
+
+/* Patient Summary Bar */
+.patient-quick-summary {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 14px 18px;
+  background: #f3f6f4;
+  border-radius: 14px;
+  font-size: 1rem;
+  color: #4b6354;
+  margin-bottom: 24px;
+}
+
+/* Action CTA */
+.triage-actions-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 36px;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.connect-doctor-btn {
+  border: none;
+  border-radius: 40px;
+  padding: 20px 44px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 80px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease;
+}
+
+.connect-doctor-btn.RED {
+  background: var(--color-red, #b3261e);
+  animation: pulse-red-btn 2s infinite;
+}
+
+.connect-doctor-btn.YELLOW {
+  background: var(--color-turmeric, #e8a317);
+}
+
+.connect-doctor-btn.GREEN {
+  background: var(--color-green, #1f5c45);
+}
+
+@keyframes pulse-red-btn {
+  0% { box-shadow: 0 0 0 0 rgba(179, 38, 30, 0.4); }
+  70% { box-shadow: 0 0 0 16px rgba(179, 38, 30, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(179, 38, 30, 0); }
+}
+
+.connect-doctor-btn:active {
+  transform: scale(0.98);
+}
